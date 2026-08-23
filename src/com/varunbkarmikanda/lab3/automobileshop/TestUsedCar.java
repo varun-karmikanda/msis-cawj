@@ -19,7 +19,7 @@ public class TestUsedCar {
         System.out.println("Car color: " + car.getColor());
         System.out.println("Car price: " + car.getPrice());
 
-        
+
 
     }
 
