@@ -1,4 +1,4 @@
-package com.varunbkarmikanda.lab3.book;
+package com.varunbkarmikanda.lab4.book;
 
 public class Author {
     private String name;
