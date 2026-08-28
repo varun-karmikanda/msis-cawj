@@ -1,10 +1,10 @@
-package com.varunbkarmikanda.lab3.book;
+package com.varunbkarmikanda.lab4.book;
 
 public class Book {
     private String name;
     private Author author;
     private double price;
-    private int qty;
+    private int qty = 0;
 
     Book(String name, Author author, double price){
         this.name = name;

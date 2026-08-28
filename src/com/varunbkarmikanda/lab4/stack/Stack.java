@@ -1,4 +1,4 @@
-package com.varunbkarmikanda.lab3.stack;
+package com.varunbkarmikanda.lab4.stack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +47,11 @@ public class Stack {
             return true;
         }
         return false;
+    }
+
+    public int getTop(){
+        if(top < 0) return -1;
+        return stack.get(top);
     }
 
     @Override
