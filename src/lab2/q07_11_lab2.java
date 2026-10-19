@@ -255,24 +255,23 @@ public class q07_11_lab2 {
 
         sc = new Scanner(System.in);
 
-//        System.out.println("--- CAWJ (LAB 2) ---");
-//        System.out.println("---  USER LOGIN  ---");
-//
-//        System.out.print("\nEnter the user name: ");
-//        String userName = sc.nextLine();
-//
-//        System.out.print("Enter the password: ");
-//        String userPassword = sc.nextLine();
+       System.out.println("--- CAWJ (LAB 2) ---");
+       System.out.println("---  USER LOGIN  ---");
 
-//        boolean isChecked = false;
-        boolean isChecked = true;
+       System.out.print("\nEnter the user name: ");
+       String userName = sc.nextLine();
 
-//        for (int i = 0; i < user.length; i++) {
-//            if((user[i].equals(userName)) && (password[i].equals(userPassword))) {
-//                isChecked = true;
-//                break;
-//            }
-//        }
+       System.out.print("Enter the password: ");
+       String userPassword = sc.nextLine();
+
+       boolean isChecked = false;
+
+       for (int i = 0; i < user.length; i++) {
+           if((user[i].equals(userName)) && (password[i].equals(userPassword))) {
+               isChecked = true;
+               break;
+           }
+       }
 
         if(isChecked) {
             mainApp();
