@@ -7,6 +7,10 @@ public class Circle implements IShape{
         this._radius = _radius;
     }
 
+    public double get_radius() {
+        return _radius;
+    }
+
     @Override
     public double getArea() {
         return Math.round(Math.PI * _radius * _radius * 100.0) / 100.0;
