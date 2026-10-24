@@ -9,6 +9,14 @@ public class Rectangle implements IShape{
         this._width = width;
     }
 
+    public double get_width() {
+        return _width;
+    }
+
+    public double get_height() {
+        return _height;
+    }
+
     @Override
     public double getArea() {
         return Math.round(_height * _width * 100.0) / 100.0;
