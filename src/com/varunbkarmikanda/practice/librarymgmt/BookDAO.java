@@ -17,8 +17,10 @@ public class BookDAO {
 
             int rows = ps.executeUpdate();
             System.out.println(rows + " book('s) inserted!");
+            AppLogger.info("Book added: ISBN: " + isbn + ", Title: " + title + ", Author: " + author + ", Total Copies: " + total_copies);
         } catch (SQLException e) {
             System.out.println("Error adding book: " + e);
+            AppLogger.error("Error adding book: " + e);
         }
     }
 
@@ -39,8 +41,10 @@ public class BookDAO {
 
             int rows = ps.executeUpdate();
             System.out.println(rows + " book('s) updated!");
+            AppLogger.info("Book updated: ID: " + book_id + ", ISBN: " + isbn + ", Title: " + title + ", Author: " + author + ", Total Copies: " + total_copies + ", Available Copies: " + available_copies);
         } catch (SQLException e) {
             System.out.println("Error modifying book: " + e);
+            AppLogger.error("Error modifying book: " + e);
         }
     }
 
@@ -54,6 +58,7 @@ public class BookDAO {
 
             try(ResultSet res = ps.executeQuery()){
                 boolean found = false;
+                AppLogger.info("Searching for books with title: " + title);
                 System.out.println("----- BOOKS -----");
                 while (res.next()){
                     found = true;
@@ -64,12 +69,19 @@ public class BookDAO {
                             res.getString("author"),
                             res.getInt("total_copies"),
                             res.getInt("available_copies"));
+                    AppLogger.info("Found book: ID: " + res.getInt("book_id") + ", ISBN: " + res.getString("isbn") + ", Title: " + res.getString("title") + ", Author: " + res.getString("author") + ", Total Copies: " + res.getInt("total_copies") + ", Available Copies: " + res.getInt("available_copies"));
                 }
-                if(!found) System.out.println("Book not found!");
+                
+                if(!found) {
+                    AppLogger.info("Book not found: " + title);
+                    System.out.println("Book not found!");
+                }
+
             }
 
         } catch (SQLException e) {
             System.out.println("Error searching book: " + e);
+            AppLogger.error("Error searching book: " + e);
         }
     }
 }

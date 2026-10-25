@@ -15,8 +15,10 @@ public class MemberDAO {
 
             int rows = ps.executeUpdate();
             System.out.println(rows + " member('s) inserted!");
+            AppLogger.info("Member added: Name: " + member_name + ", Email: " + email + ", Phone: " + phone);
         } catch (SQLException e) {
             System.out.println("Error adding member: " + e);
+            AppLogger.error("Error adding member: " + e);
         }
     }
 
@@ -34,8 +36,10 @@ public class MemberDAO {
 
             int rows = ps.executeUpdate();
             System.out.println(rows + " member('s) updated!");
+            AppLogger.info("Member updated: ID: " + member_id + ", Name: " + member_name + ", Email: " + email + ", Phone: " + phone);
         } catch (SQLException e) {
             System.out.println("Error modifying member: " + e);
+            AppLogger.error("Error modifying member: " + e);
         }
     }
 
@@ -57,12 +61,17 @@ public class MemberDAO {
                             res.getString("member_name"),
                             res.getString("email"),
                             res.getString("phone"));
+                    AppLogger.info("Found member: ID: " + res.getInt("member_id") + ", Name: " + res.getString("member_name") + ", Email: " + res.getString("email") + ", Phone: " + res.getString("phone"));
                 }
-                if(!found) System.out.println("Member not found!");
+                if(!found) {
+                    System.out.println("Member not found!");
+                    AppLogger.info("Member not found: " + member_name);
+                }
             }
 
         } catch (SQLException e) {
             System.out.println("Error searching member: " + e);
+            AppLogger.error("Error searching member: " + e);
         }
     }
 }

@@ -28,12 +28,14 @@ public class BorrowingDAO {
                 try(ResultSet res = psCheckAvailability.executeQuery()){
                     if(!res.next()){
                         System.out.println("No book available with ID: " + book_id);
+                        AppLogger.info("No book available with ID: " + book_id);
                         conn.rollback();
                         return;
                     }
                     int available = res.getInt("available_copies");
                     if(available < copies){
                         System.out.println("Only " + available + " are available.");
+                        AppLogger.info("Only " + available + " are available for book ID: " + book_id);
                         conn.rollback();
                         return;
                     }
@@ -55,12 +57,15 @@ public class BorrowingDAO {
 
                 conn.commit();
                 System.out.println(copies + " copy(ies) borrowed. Borrow IDs: " + borrowIds);
+                AppLogger.info(copies + " copy(ies) borrowed for book ID: " + book_id + ", Member ID: " + member_id + ". Borrow IDs: " + borrowIds);
             } catch (Exception e) {
                 conn.rollback();
                 System.out.println("Error issuing the book! " + e);
+                AppLogger.error("Error issuing the book! " + e);
             }
         } catch (Exception e) {
             System.out.println("connection error issuing the book!" + e);
+            AppLogger.error("connection error issuing the book!" + e);
         }
     }
 
@@ -82,11 +87,13 @@ public class BorrowingDAO {
                 try(ResultSet res = psFind.executeQuery()){
                     if(!res.next()){
                         System.out.println("No borrowing with ID: " + borrow_id);
+                        AppLogger.info("No borrowing with ID: " + borrow_id);
                         conn.rollback();
                         return;
                     }
                     if(res.getDate("return_date") != null){
                         System.out.println("Borrowing "  + borrow_id + " already returned");
+                        AppLogger.info("Borrowing "  + borrow_id + " already returned");
                         conn.rollback();
                         return;
                     }
@@ -101,12 +108,15 @@ public class BorrowingDAO {
 
                 conn.commit();
                 System.out.println("Book returned successfully!");
+                AppLogger.info("Book returned successfully! Borrow ID: " + borrow_id + ", Book ID: " + book_id);
             } catch (Exception e) {
                 conn.rollback();
                 System.out.println("Error returning book: " + e);
+                AppLogger.error("Error returning book: " + e);
             }
         } catch (SQLException e) {
             System.out.println("DB Error: " + e);
+            AppLogger.error("DB Error: " + e);
         }
     }
 }
