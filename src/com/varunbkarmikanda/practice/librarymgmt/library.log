@@ -1,0 +1,34 @@
+2026-10-26 00:17:12 | INFO    | Book added: ISBN: 978-1260440232, Title: Java: The Complete Reference, Author: Herbert Schildt, Total Copies: 5
+2026-10-26 00:17:12 | INFO    | Book added: ISBN: 978-0078022159, Title: Database System Concepts, Author: Abraham Silberschatz, Total Copies: 4
+2026-10-26 00:17:12 | INFO    | Book added: ISBN: 978-0132350884, Title: Clean Code, Author: Robert C. Martin, Total Copies: 3
+2026-10-26 00:17:12 | INFO    | Book added: ISBN: 978-0262033848, Title: Introduction to Algorithms, Author: Thomas H. Cormen, Total Copies: 2
+2026-10-26 00:17:12 | INFO    | Book added: ISBN: 978-0134685991, Title: Effective Java, Author: Joshua Bloch, Total Copies: 4
+2026-10-26 00:17:12 | INFO    | Book updated: ID: 1, ISBN: null, Title: Java: The Complete Reference, 13th Ed, Author: null, Total Copies: null, Available Copies: null
+2026-10-26 00:17:12 | INFO    | Book updated: ID: 2, ISBN: null, Title: null, Author: null, Total Copies: 6, Available Copies: null
+2026-10-26 00:17:12 | INFO    | Book updated: ID: 3, ISBN: 978-0132350885, Title: null, Author: Robert Martin, Total Copies: null, Available Copies: null
+2026-10-26 00:17:12 | INFO    | Book updated: ID: 4, ISBN: 978-0262033849, Title: Intro to Algorithms, Author: T. Cormen, Total Copies: 3, Available Copies: 2
+2026-10-26 00:17:12 | INFO    | Searching for books with title: Java
+2026-10-26 00:17:12 | INFO    | Found book: ID: 1, ISBN: 978-1260440232, Title: Java: The Complete Reference, 13th Ed, Author: Herbert Schildt, Total Copies: 5, Available Copies: 5
+2026-10-26 00:17:12 | INFO    | Found book: ID: 5, ISBN: 978-0134685991, Title: Effective Java, Author: Joshua Bloch, Total Copies: 4, Available Copies: 4
+2026-10-26 00:17:12 | INFO    | Member added: Name: Ananya Rao, Email: ananya.rao@mail.com, Phone: 9876543210
+2026-10-26 00:17:12 | INFO    | Member added: Name: Rahul Shetty, Email: rahul.shetty@mail.com, Phone: 9876543211
+2026-10-26 00:17:12 | INFO    | Member added: Name: Priya Nair, Email: priya.nair@mail.com, Phone: 9876543212
+2026-10-26 00:17:12 | INFO    | Member added: Name: Karthik Bhat, Email: karthik.bhat@mail.com, Phone: 9876543213
+2026-10-26 00:17:12 | INFO    | Member added: Name: Sneha Kamath, Email: sneha.kamath@mail.com, Phone: 9876543214
+2026-10-26 00:17:12 | INFO    | Member updated: ID: 1, Name: Ananya R. Rao, Email: null, Phone: null
+2026-10-26 00:17:12 | INFO    | Member updated: ID: 2, Name: null, Email: null, Phone: 9000000002
+2026-10-26 00:17:12 | INFO    | Member updated: ID: 3, Name: null, Email: priya.n@mail.com, Phone: null
+2026-10-26 00:17:12 | INFO    | Member updated: ID: 4, Name: Karthik B, Email: karthik.b@mail.com, Phone: 9000000004
+2026-10-26 00:17:12 | INFO    | Member updated: ID: 99, Name: Nobody, Email: null, Phone: null
+2026-10-26 00:17:12 | SEVERE  | Error modifying member: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'ananya.rao@mail.com' for key 'email'
+2026-10-26 00:17:12 | INFO    | Found member: ID: 1, Name: Ananya R. Rao, Email: ananya.rao@mail.com, Phone: 9876543210
+2026-10-26 00:17:12 | INFO    | Found member: ID: 2, Name: Rahul Shetty, Email: rahul.shetty@mail.com, Phone: 9000000002
+2026-10-26 00:17:12 | INFO    | Found member: ID: 3, Name: Priya Nair, Email: priya.n@mail.com, Phone: 9876543212
+2026-10-26 00:17:12 | INFO    | Found member: ID: 4, Name: Karthik B, Email: karthik.b@mail.com, Phone: 9000000004
+2026-10-26 00:17:12 | INFO    | Found member: ID: 5, Name: Sneha Kamath, Email: sneha.kamath@mail.com, Phone: 9876543214
+2026-10-26 00:17:12 | INFO    | Found member: ID: 4, Name: Karthik B, Email: karthik.b@mail.com, Phone: 9000000004
+2026-10-26 00:17:12 | INFO    | 2 copy(ies) borrowed for book ID: 1, Member ID: 3. Borrow IDs: [1, 2]
+2026-10-26 00:17:12 | INFO    | 1 copy(ies) borrowed for book ID: 2, Member ID: 4. Borrow IDs: [3]
+2026-10-26 00:17:12 | INFO    | Only 4 are available for book ID: 5
+2026-10-26 00:17:12 | INFO    | Book returned successfully! Borrow ID: 2, Book ID: 1
+2026-10-26 00:17:12 | INFO    | No borrowing with ID: 7
