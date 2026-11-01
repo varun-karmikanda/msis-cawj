@@ -1,9 +1,9 @@
-package lab6;
+package lab6.student;
 
 import java.io.*;
 
 public class Auth {
-    File login_file_path = new File("src/lab6/login.txt");
+    File login_file_path = new File("src/lab6/student/login.txt");
 
     public boolean authenticate(String[] userDetails){
         String name = userDetails[0];

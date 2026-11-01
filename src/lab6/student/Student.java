@@ -1,9 +1,9 @@
-package lab6;
+package lab6.student;
 
 import java.io.*;
 
 public class Student {
-    private File student_file_path = new File("src/lab6/student.txt");
+    private File student_file_path = new File("src/lab6/student/student_details.txt");
     private File temp_student_file_path = new File(student_file_path.getAbsolutePath() + ".temp");
 
     public void insertStudentRecord(String[] studentDetails){
