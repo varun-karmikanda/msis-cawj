@@ -1,6 +1,8 @@
 package com.varunbkarmikanda.lab9.college;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Date;
 import java.util.logging.*;
 
@@ -9,7 +11,13 @@ public class AppLogger {
 
     static {
         try{
-            FileHandler fh = new FileHandler("src/com/varunbkarmikanda/lab9/college/college.log", true);
+            Path logPath = Path.of(AppConfig.getRequired("app.log.file"));
+            Path parent = logPath.getParent();
+            if (parent != null) {
+                Files.createDirectories(parent);
+            }
+
+            FileHandler fh = new FileHandler(logPath.toString(), true);
             fh.setFormatter(new SimpleFormatter(){
                 @Override
                 public String format(LogRecord r){
@@ -30,4 +38,3 @@ public class AppLogger {
 
     public static void error(String msg) { logger.severe(msg); }
 }
-
