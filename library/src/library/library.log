@@ -1,0 +1,84 @@
+Nov 23, 2026 10:56:57 PM library.AppLogger info
+INFO: 1 book added successfully
+Nov 23, 2026 10:58:19 PM library.AppLogger info
+INFO: 1 book updated successfully
+Nov 23, 2026 11:04:22 PM library.AppLogger info
+INFO: 1 member added successfully
+Nov 23, 2026 11:05:09 PM library.AppLogger info
+INFO: 1 member updated successfully
+Nov 23, 2026 11:13:28 PM library.AppLogger info
+INFO: book searched successfully
+Nov 23, 2026 11:15:29 PM library.AppLogger info
+INFO: member searched successfully
+Nov 23, 2026 11:40:28 PM library.AppLogger error
+SEVERE: Error connecting to database: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'available_copies' in 'field list'
+Nov 23, 2026 11:41:12 PM library.AppLogger error
+SEVERE: Error connecting to database: java.sql.SQLException: Before start of result set
+Nov 23, 2026 11:42:01 PM library.AppLogger error
+SEVERE: Error connecting to database: java.sql.SQLException: Before start of result set
+Nov 23, 2026 11:43:06 PM library.AppLogger error
+SEVERE: Error connecting to database: java.sql.SQLException: Before start of result set
+Nov 23, 2026 11:43:41 PM library.AppLogger info
+INFO: Error issuing book
+Nov 23, 2026 11:43:55 PM library.AppLogger info
+INFO: Error issuing book: java.sql.SQLException: Before start of result set
+Nov 23, 2026 11:45:04 PM library.AppLogger info
+INFO: Error issuing book: java.sql.SQLException: Column 'available_copies' not found.
+Nov 23, 2026 11:45:06 PM library.AppLogger info
+INFO: Error issuing book: java.sql.SQLException: Column 'available_copies' not found.
+Nov 23, 2026 11:46:07 PM library.AppLogger info
+INFO: Error issuing book: java.sql.SQLException: Before start of result set
+Nov 24, 2026 12:00:08 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= (3, 1, 2, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 7 DAY)' at line 1
+Nov 24, 2026 12:00:52 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Nov 24, 2026 12:01:32 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Nov 24, 2026 12:02:33 AM library.AppLogger info
+INFO: 1 book issued
+Nov 24, 2026 12:02:33 AM library.AppLogger info
+INFO: 1 book issued and updated
+Nov 24, 2026 12:10:56 AM library.AppLogger error
+SEVERE: Error connecting to database: java.sql.SQLException: No value specified for parameter 1
+Nov 24, 2026 12:11:18 AM library.AppLogger error
+SEVERE: Error connecting to database: java.sql.SQLException: No value specified for parameter 1
+Nov 24, 2026 12:15:52 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:15:52 AM library.AppLogger info
+INFO: 1 book updated
+Nov 24, 2026 12:18:37 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+Nov 24, 2026 12:18:37 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:18:37 AM library.AppLogger info
+INFO: 1 book updated
+Nov 24, 2026 12:19:24 AM library.AppLogger info
+INFO: 1 book issued
+Nov 24, 2026 12:19:24 AM library.AppLogger info
+INFO: 1 book issued and updated
+Nov 24, 2026 12:19:24 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:19:24 AM library.AppLogger info
+INFO: 1 book updated
+Nov 24, 2026 12:26:20 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+Nov 24, 2026 12:26:26 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+Nov 24, 2026 12:26:26 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:26:26 AM library.AppLogger info
+INFO: 1 book updated
+Nov 24, 2026 12:26:56 AM library.AppLogger info
+INFO: 1 book issued
+Nov 24, 2026 12:26:56 AM library.AppLogger info
+INFO: 1 book issued and updated
+Nov 24, 2026 12:26:56 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:26:56 AM library.AppLogger info
+INFO: 1 book updated
+Nov 24, 2026 12:27:38 AM library.AppLogger info
+INFO: Error issuing book: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '4' for key 'PRIMARY'
+Nov 24, 2026 12:27:38 AM library.AppLogger info
+INFO: 1 book returned
+Nov 24, 2026 12:27:38 AM library.AppLogger info
+INFO: 1 book updated
