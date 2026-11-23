@@ -1,0 +1,20 @@
+Nov 23, 2026 3:47:22 PM college.AppLogger error
+SEVERE: Error adding examination: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3' for key 'PRIMARY'
+Nov 23, 2026 3:47:23 PM college.AppLogger info
+INFO: 1 examination('s) updated successfully
+Nov 23, 2026 3:47:23 PM college.AppLogger info
+INFO: 1 result('s) added successfully
+Nov 23, 2026 3:48:13 PM college.AppLogger error
+SEVERE: Error updating result: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'exam_id' in 'where clause'
+Nov 23, 2026 3:48:35 PM college.AppLogger info
+INFO: 1 result('s) updated successfully
+Nov 23, 2026 4:01:02 PM college.AppLogger info
+INFO: 1 result('s) added successfully
+Nov 23, 2026 4:03:19 PM college.AppLogger info
+INFO: 1 result('s) added successfully
+Nov 23, 2026 4:32:43 PM college.AppLogger info
+INFO: Subject wise average marks fetched successfully
+Nov 23, 2026 4:41:19 PM college.AppLogger info
+INFO: High scoring students fetched successfully
+Nov 23, 2026 4:41:58 PM college.AppLogger info
+INFO: High scoring students fetched successfully
